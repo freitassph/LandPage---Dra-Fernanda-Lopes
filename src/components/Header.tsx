@@ -70,7 +70,7 @@ const Header: React.FC = () => {
             FERNANDA <span className="text-brand-rose group-hover:text-white transition-colors">LOPES</span>
           </a>
 
-          <nav className="hidden lg:flex space-x-10 text-[11px] uppercase tracking-[0.25em] text-brand-muted">
+          <nav className="hidden xl:flex space-x-10 text-[11px] uppercase tracking-[0.25em] text-brand-muted">
             {['Início', 'Especialista', 'Atuação', 'Agendar', 'Localização', 'Dúvidas'].map((item) => {
               const ids: {[key: string]: string} = {
                 'Início': 'inicio',
@@ -98,14 +98,14 @@ const Header: React.FC = () => {
             href={whatsappUrl}
             target="_blank" 
             rel="noopener noreferrer"
-            className="hidden lg:inline-block px-8 py-3 border border-brand-rose/50 text-brand-rose hover:bg-brand-rose hover:text-white transition-all duration-300 rounded-sm text-[10px] font-bold uppercase tracking-[0.25em] active:scale-95"
+            className="hidden xl:inline-block px-8 py-3 border border-brand-rose/50 text-brand-rose hover:bg-brand-rose hover:text-white transition-all duration-300 rounded-sm text-[10px] font-bold uppercase tracking-[0.25em] active:scale-95"
           >
             Agendar
           </a>
 
           <button 
             onClick={toggleMenu} 
-            className="lg:hidden text-white focus:outline-none p-4 -mr-2 relative"
+            className="xl:hidden text-white focus:outline-none p-4 -mr-2 relative"
             aria-label="Menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
