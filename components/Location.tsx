@@ -20,7 +20,7 @@ const Location: React.FC = () => {
                 href={mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-brand-bg rounded-full text-brand-rose hover:bg-brand-rose hover:text-white transition-colors duration-300 flex-shrink-0 cursor-pointer"
+                className="p-2 bg-brand-rose rounded-full text-white hover:bg-white hover:text-brand-rose transition-colors duration-300 flex-shrink-0 cursor-pointer shadow-[0_0_15px_rgba(205,139,139,0.3)]"
                 aria-label="Ver localização no Google Maps"
               >
                 <MapPin className="w-5 h-5" />
@@ -85,7 +85,7 @@ const Location: React.FC = () => {
         </div>
         
         {/* Ajuste de altura para Tablets: h-96 ou min-h */}
-        <div className="w-full lg:w-1/2 h-80 md:h-96 lg:h-auto bg-[#2C2C2C] rounded-sm overflow-hidden relative group reveal delay-200">
+        <div className="w-full lg:w-1/2 h-80 md:h-96 lg:h-auto bg-[#2C2C2C] rounded-sm overflow-hidden relative group reveal delay-200 isolate">
           <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.376674640866!2d-49.0700!3d-11.7290!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDQzJzQ0LjQiUyA0OcKwMDQnMTIuMCJX!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" 
             width="100%" 
@@ -93,7 +93,9 @@ const Location: React.FC = () => {
             style={{ border: 0, filter: 'grayscale(100%) invert(92%) contrast(83%)' }} 
             allowFullScreen={true} 
             loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
             title="Mapa da Clínica"
+            className="w-full h-full"
           ></iframe>
         </div>
       </div>
