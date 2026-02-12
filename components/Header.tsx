@@ -7,7 +7,6 @@ const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
 
   const whatsappUrl = getWhatsAppUrl(WHATSAPP_MESSAGES.HEADER);
 
