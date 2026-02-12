@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const About: React.FC = () => {
@@ -9,30 +10,19 @@ const About: React.FC = () => {
             {/* Glow effect */}
             <div className="absolute -inset-4 bg-brand-rose/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             
-            <div className="relative">
+            <div className="relative overflow-hidden rounded-sm">
                {/* Vertical portrait */}
-               <div className="relative overflow-hidden rounded-sm shadow-2xl">
-                 <img 
-                   src="https://i.ibb.co/HLN98G0z/wmremove-transformed.avif" 
-                   alt="Dra. Fernanda Lopes" 
-                   className="relative z-10 w-full h-auto object-cover transition-all duration-700 transform group-hover:scale-[1.02]"
-                 />
-                 <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent opacity-50 z-20"></div>
-               </div>
+               <img 
+                 src="https://i.ibb.co/HLN98G0z/wmremove-transformed.avif" 
+                 alt="Dra. Fernanda Lopes" 
+                 className="relative z-10 w-full h-auto object-cover transition-all duration-700 transform group-hover:scale-[1.02]"
+               />
+               <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent opacity-50 z-20"></div>
+            </div>
 
-               {/* Badge de Autoridade - 10+ Anos */}
-               <div className="absolute -bottom-6 -right-2 md:-bottom-12 md:-right-10 z-30 bg-[#151515] p-6 md:p-8 border border-brand-rose/20 shadow-[0_20px_50px_rgba(0,0,0,0.7)] group-hover:-translate-y-2 transition-transform duration-500">
-                  <div className="flex flex-col items-start relative">
-                    {/* Decorative corner */}
-                    <div className="absolute -top-6 -left-6 md:-top-8 md:-left-8 w-8 h-8 md:w-12 md:h-12 border-t border-l border-brand-rose/40"></div>
-                    
-                    <p className="font-serif text-4xl md:text-5xl text-brand-rose italic leading-none">10+</p>
-                    <p className="text-[10px] md:text-xs text-brand-muted uppercase tracking-[0.25em] mt-3 leading-relaxed border-t border-white/5 pt-3 w-full">
-                      Anos de <br />
-                      <span className="text-white font-medium">Dedicação</span>
-                    </p>
-                  </div>
-               </div>
+            <div className="absolute -bottom-6 -right-6 z-30 bg-brand-surface p-6 border border-brand-gold/30 shadow-xl hidden md:block">
+              <p className="font-serif text-3xl text-brand-gold italic">10+</p>
+              <p className="text-xs text-brand-muted uppercase tracking-widest mt-1">Anos de <br />Dedicação</p>
             </div>
           </div>
 

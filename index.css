@@ -6,6 +6,32 @@
   body {
     @apply bg-brand-bg text-brand-text font-sans antialiased selection:bg-brand-rose selection:text-white;
   }
+
+  /* Custom Scrollbar Integration (Noir Aesthetic) */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-white/10 rounded-full transition-colors duration-500;
+    border: 1px solid transparent;
+    background-clip: content-box;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-brand-rose/40;
+  }
+
+  /* Firefox Support */
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+  }
 }
 
 /* Engine de Animação (Silent Luxury) */

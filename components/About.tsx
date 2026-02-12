@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const About: React.FC = () => {
@@ -18,9 +19,10 @@ const About: React.FC = () => {
                  <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent opacity-60 z-20"></div>
               </div>
 
-              <div className="absolute -bottom-6 -right-6 z-30 bg-brand-surface p-8 border border-white/5 shadow-2xl reveal delay-200 hidden md:block">
-                <p className="font-serif text-4xl text-brand-rose italic">10+</p>
-                <p className="text-[10px] text-brand-muted uppercase tracking-[0.25em] mt-2">Anos de <br />Dedicação</p>
+              {/* Badge "10+ Anos": Ajustado para aparecer no mobile com escala e posição otimizadas */}
+              <div className="absolute -bottom-4 right-4 md:-bottom-6 md:-right-6 z-30 bg-brand-surface p-6 md:p-8 border border-white/5 shadow-2xl reveal delay-200">
+                <p className="font-serif text-3xl md:text-4xl text-brand-rose italic">10+</p>
+                <p className="text-[9px] md:text-[10px] text-brand-muted uppercase tracking-[0.25em] mt-2">Anos de <br />Dedicação</p>
               </div>
             </div>
           </div>
