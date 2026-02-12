@@ -20,8 +20,8 @@ const About: React.FC = () => {
                <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent opacity-50 z-20"></div>
             </div>
 
-            <div className="absolute -bottom-6 -right-6 z-30 bg-brand-surface p-6 border border-brand-gold/30 shadow-xl hidden md:block">
-              <p className="font-serif text-3xl text-brand-gold italic">10+</p>
+            <div className="absolute -bottom-6 -right-6 z-30 bg-brand-surface p-6 border border-brand-rose/20 shadow-xl hidden md:block">
+              <p className="font-serif text-3xl text-brand-rose italic">10+</p>
               <p className="text-xs text-brand-muted uppercase tracking-widest mt-1">Anos de <br />Dedicação</p>
             </div>
           </div>
