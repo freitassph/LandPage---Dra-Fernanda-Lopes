@@ -15,11 +15,11 @@ export const CONTACT_INFO = {
 };
 
 export const WHATSAPP_MESSAGES = {
-  DEFAULT: "Olá, gostaria de agendar uma consulta com a Dra. Fernanda Lopes.",
-  HEADER: "Olá, gostaria de agendar uma consulta com a Dra. Fernanda Lopes | Ginecologista e Obstetra.",
-  UROGYNECOLOGY: "Olá, gostaria de agendar uma avaliação uroginecológica com a Dra. Fernanda Lopes.",
-  LOCATION: "Olá, Dra. Fernanda! Gostaria de agendar uma consulta.",
-  FAQ: "Tenho outra dúvida, poderia me ajudar?",
+  DEFAULT: "Olá, gostaria de marcar uma consulta com a Dra Fernanda.",
+  HEADER: "Olá, gostaria de marcar uma consulta com a Dra Fernanda.",
+  UROGYNECOLOGY: "Olá, gostaria de marcar uma consulta com a Dra Fernanda.",
+  LOCATION: "Olá, gostaria de marcar uma consulta com a Dra Fernanda.",
+  FAQ: "Olá, tenho outra dúvida sobre a consulta com a Dra. Fernanda.",
 };
 
 export const getWhatsAppUrl = (message: string = WHATSAPP_MESSAGES.DEFAULT) => {

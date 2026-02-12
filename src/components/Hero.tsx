@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Hero: React.FC = () => {
@@ -75,7 +74,7 @@ const Hero: React.FC = () => {
           
           <div className="flex flex-col sm:flex-row gap-4">
             <a 
-              href="https://wa.me/5563999992505?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Fernanda%20Lopes."
+              href="https://wa.me/5563999992505?text=Ol%C3%A1%2C%20gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra%20Fernanda."
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-brand-rose text-white px-8 py-4 rounded-sm hover:bg-white hover:text-brand-bg transition-all duration-300 uppercase tracking-widest text-xs font-bold shadow-[0_0_20px_rgba(205,139,139,0.2)] text-center flex items-center justify-center"
