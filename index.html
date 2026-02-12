@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Primário -->
+    <title>Dra. Fernanda Lopes | Ginecologista e Obstetra</title>
+    <meta name="title" content="Dra. Fernanda Lopes | Ginecologista e Obstetra" />
+    <meta name="description" content="Dra. Fernanda Lopes - Ginecologista e Obstetra em Gurupi-TO. Especialista em Ultrassonografia, Pré-Natal de Alto Risco e Saúde Integral da Mulher na Clínica Femma." />
+    <meta name="keywords" content="ginecologista gurupi, obstetra gurupi, dra fernanda lopes, clinica femma gurupi, ultrassonografia go, saúde da mulher tocantins, parto humanizado gurupi, pré natal alto risco, uroginecologia gurupi, implantes hormonais gurupi" />
+    <meta name="author" content="Dra. Fernanda Lopes" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://drafernandalopes.vercel.app/" />
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://drafernandalopes.vercel.app/" />
+    <meta property="og:title" content="Dra. Fernanda Lopes | Ginecologista e Obstetra" />
+    <meta property="og:description" content="Cuidado especializado e humanizado em Ginecologia, Obstetrícia e Ultrassonografia em Gurupi-TO." />
+    <meta property="og:image" content="https://i.ibb.co/HLN98G0z/wmremove-transformed.avif" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Dra. Fernanda Lopes" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://drafernandalopes.vercel.app/" />
+    <meta property="twitter:title" content="Dra. Fernanda Lopes | Ginecologista e Obstetra" />
+    <meta property="twitter:description" content="Referência em Ginecologia e Obstetrícia em Gurupi-TO. Especialista em Ultrassonografia e Pré-Natal." />
+    <meta property="twitter:image" content="https://i.ibb.co/HLN98G0z/wmremove-transformed.avif" />
+
+    <!-- Meta Tags para Mobile e Navegadores -->
+    <meta name="theme-color" content="#121212" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Dra. Fernanda" />
+    <link rel="apple-touch-icon" href="/vite.svg" />
+    
+    <!-- Schema.org para Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dra. Fernanda Lopes",
+      "alternateName": "Dra. Fernanda Lopes | Ginecologista e Obstetra",
+      "image": "https://i.ibb.co/HLN98G0z/wmremove-transformed.avif",
+      "description": "Médica Ginecologista e Obstetra especializada em Ultrassonografia e Saúde da Mulher.",
+      "url": "https://drafernandalopes.vercel.app/",
+      "telephone": "+5563999992505",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Avenida Amazonas, nº 1271, Setor Central",
+        "addressLocality": "Gurupi",
+        "addressRegion": "TO",
+        "postalCode": "77403-030",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-11.7290",
+        "longitude": "-49.0700"
+      },
+      "medicalSpecialty": ["Gynecology", "Obstetrics", "Ultrasonography"],
+      "currenciesAccepted": "BRL",
+      "priceRange": "$$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                bg: '#121212',       // Deep Charcoal (Fundo Infinito)
+                surface: '#1E1E1E',  // Camada Elevada
+                rose: '#CD8B8B',     // Acento "Rose Clay"
+                gold: '#D4AF37',     // Detalhes "Joia"
+                text: '#F3F4F6',     // Off-white
+                muted: '#C4C4C4',    // Cinza Texto (Melhorado o contraste de #9CA3AF)
+              }
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['"Mulish"', 'sans-serif'],
+            },
+            backgroundImage: {
+              'hero-gradient': 'linear-gradient(to right, #121212 40%, rgba(18,18,18,0.6) 100%)',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 1s ease-out forwards',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .glass {
+        background: rgba(30, 30, 30, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      
+      /* Silent Luxury Animation Engine */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: opacity, transform;
+      }
+      
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      /* Staggered delays for child elements if needed */
+      .reveal.delay-100 { transition-delay: 0.1s; }
+      .reveal.delay-200 { transition-delay: 0.2s; }
+      .reveal.delay-300 { transition-delay: 0.3s; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.4"
+  }
+}
+</script>
+</head>
+  <body class="bg-brand-bg text-brand-text font-sans selection:bg-brand-rose selection:text-white antialiased">
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+    
+    <!-- Animation Engine Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              observer.unobserve(entry.target); // Animate only once
+            }
+          });
+        }, observerOptions);
+
+        // Defer selection slightly to ensure React has mounted
+        setTimeout(() => {
+          const elements = document.querySelectorAll('.reveal');
+          elements.forEach(el => observer.observe(el));
+        }, 100);
+      });
+    </script>
+  </body>
+</html>
