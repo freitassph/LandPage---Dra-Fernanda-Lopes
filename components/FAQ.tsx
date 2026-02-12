@@ -14,21 +14,21 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
     <div className="border-b border-white/5 last:border-0">
       <button 
         onClick={() => setIsOpen(!isOpen)} 
-        className="w-full py-6 flex justify-between items-center text-left group focus:outline-none"
+        className="w-full py-8 flex justify-between items-center text-left group focus:outline-none"
         aria-expanded={isOpen}
       >
-        <span className="text-lg md:text-xl font-serif text-white group-hover:text-brand-rose transition-colors duration-300 pr-8">
+        <span className="text-xl md:text-2xl font-serif text-white group-hover:text-brand-rose transition-colors duration-300 pr-8 italic">
           {question}
         </span>
-        <span className={`text-brand-rose transition-transform duration-300 ${isOpen ? 'rotate-180' : 'rotate-0'}`}>
-          {isOpen ? <Minus size={20} strokeWidth={1} /> : <Plus size={20} strokeWidth={1} />}
+        <span className={`text-brand-rose transition-transform duration-500 ${isOpen ? 'rotate-180' : 'rotate-0'}`}>
+          {isOpen ? <Minus size={18} strokeWidth={1} /> : <Plus size={18} strokeWidth={1} />}
         </span>
       </button>
       <div 
-        className={`grid transition-all duration-500 ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100 mb-6' : 'grid-rows-[0fr] opacity-0'}`}
+        className={`grid transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${isOpen ? 'grid-rows-[1fr] opacity-100 mb-8' : 'grid-rows-[0fr] opacity-0'}`}
       >
         <div className="overflow-hidden">
-          <p className="text-brand-muted font-light leading-relaxed text-sm md:text-base pr-8">
+          <p className="text-brand-muted font-light leading-loose text-sm md:text-base pr-8 max-w-2xl">
             {answer}
           </p>
         </div>
@@ -64,42 +64,39 @@ const FAQ: React.FC = () => {
   const whatsappUrl = getWhatsAppUrl(WHATSAPP_MESSAGES.FAQ);
 
   return (
-    <section id="faq" className="py-24 bg-brand-bg relative scroll-mt-28">
+    <section id="faq" className="py-32 bg-brand-bg relative scroll-mt-20">
       <div className="container mx-auto px-6">
-        {/* Alterado para flex-col até o lg (desktop) */}
-        <div className="flex flex-col lg:flex-row gap-16">
+        <div className="flex flex-col lg:flex-row gap-20">
           
-          {/* Header da Seção */}
           <div className="w-full lg:w-1/3 reveal">
-            <span className="text-brand-rose text-xs font-bold uppercase tracking-[0.3em]">Dúvidas</span>
-            <h2 className="text-4xl font-serif text-white mt-4 mb-6">Perguntas Frequentes</h2>
-            <p className="text-brand-muted font-light mb-8">
+            <span className="text-brand-rose text-[10px] font-bold uppercase tracking-[0.4em]">Dúvidas</span>
+            <h2 className="text-5xl font-serif text-white mt-6 mb-8">Perguntas <br /><span className="italic text-brand-muted">Frequentes</span></h2>
+            <p className="text-brand-muted font-light mb-10 leading-relaxed">
               Esclareça questões comuns sobre o atendimento, convênios e procedimentos realizados pela Dra. Fernanda Lopes.
             </p>
             <a 
               href={whatsappUrl} 
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden lg:inline-block text-brand-rose hover:text-white border-b border-brand-rose pb-1 transition-colors uppercase tracking-widest text-xs font-bold"
+              className="hidden lg:inline-block text-brand-rose hover:text-white border-b border-brand-rose pb-1 transition-colors uppercase tracking-[0.25em] text-[10px] font-bold"
             >
               Falar com a Secretaria
             </a>
           </div>
 
-          {/* Lista de FAQ */}
           <div className="w-full lg:w-2/3 reveal delay-100">
-            <div className="divide-y divide-white/5">
+            <div className="divide-y divide-white/5 border-t border-white/5">
               {faqData.map((item, index) => (
                 <FAQItem key={index} question={item.question} answer={item.answer} />
               ))}
             </div>
             
-             <div className="mt-8 lg:hidden">
+             <div className="mt-12 lg:hidden">
                 <a 
                   href={whatsappUrl} 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-brand-rose hover:text-white border-b border-brand-rose pb-1 transition-colors uppercase tracking-widest text-xs font-bold"
+                  className="text-brand-rose hover:text-white border-b border-brand-rose pb-1 transition-colors uppercase tracking-[0.25em] text-[10px] font-bold"
                 >
                   Tenho outra dúvida
                 </a>
