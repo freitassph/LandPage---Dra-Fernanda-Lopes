@@ -10,38 +10,29 @@ const Hero: React.FC = () => {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-brand-bg scroll-mt-20">
       
-      {/* ================= BACKGROUND LAYERS ================= */}
-      
-      {/* 1. MOBILE BACKGROUND (< 768px) */}
-      <div className="absolute inset-0 z-0 md:hidden">
-        {/* Gradient refinado para preto puro */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/50 to-[#050505]/30 z-10"></div>
-        <img 
-          src={MOBILE_IMAGE} 
-          alt="Dra. Fernanda Lopes" 
-          className="w-full h-full object-cover object-center opacity-70"
-        />
-      </div>
-
-      {/* 2. TABLET BACKGROUND (>= 768px e < 1024px) */}
-      <div className="absolute inset-0 z-0 hidden md:block lg:hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/70 to-transparent z-10"></div>
-        <img 
-          src={TABLET_IMAGE} 
-          alt="Dra. Fernanda Lopes" 
-          className="w-full h-full object-cover object-[center_20%] opacity-60"
-        />
-      </div>
-
-      {/* 3. DESKTOP BACKGROUND (>= 1024px) */}
-      <div className="absolute inset-0 z-0 hidden lg:block">
-        {/* Desktop Gradient: Cinematic Noir - Muito mais suave */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/90 to-[#050505]/10 z-10"></div>
-        <img 
-          src={DESKTOP_IMAGE} 
-          alt="Dra. Fernanda Lopes" 
-          className="w-full h-full object-cover object-[50%_15%] opacity-50"
-        />
+      {/* ================= BACKGROUND LAYERS (OPTIMIZED) ================= */}
+      {/* 
+          Performance Fix: Use <picture> tag.
+          This ensures the browser ONLY downloads the image required for the current viewport,
+          massively reducing LCP (Largest Contentful Paint) time on mobile networks.
+      */}
+      <div className="absolute inset-0 z-0">
+         <picture>
+            {/* Desktop */}
+            <source media="(min-width: 1024px)" srcSet={DESKTOP_IMAGE} />
+            {/* Tablet */}
+            <source media="(min-width: 768px)" srcSet={TABLET_IMAGE} />
+            {/* Mobile (Default) */}
+            <img 
+              src={MOBILE_IMAGE} 
+              alt="Dra. Fernanda Lopes - Ginecologista e Obstetra" 
+              className="w-full h-full object-cover object-[center_30%] md:object-[center_20%] lg:object-[50%_15%] opacity-70 md:opacity-60 lg:opacity-50 transition-opacity duration-1000"
+              fetchPriority="high"
+            />
+         </picture>
+         
+         {/* Gradients Overlay integrated for all breakpoints */}
+         <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/50 to-transparent md:bg-gradient-to-r md:from-[#050505] md:via-[#050505]/80 md:to-[#050505]/10 z-10"></div>
       </div>
 
       {/* ================= CONTENT ================= */}
