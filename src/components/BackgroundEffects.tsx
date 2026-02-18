@@ -6,8 +6,8 @@ const BackgroundEffects: React.FC = () => {
       {/* 
         PERFORMANCE OPTIMIZATION (MOBILE FIRST):
         - Blobs e animações pesadas (blur/animate) removidos no mobile (hidden).
+        - Noise Texture removido no mobile (hidden) pois causa alto uso de CPU.
         - No mobile, usamos apenas um gradiente estático suave.
-        - No desktop (md:block), mantemos o efeito "Silent Luxury".
       */}
       
       {/* Static Gradient for Mobile Performance */}
@@ -23,9 +23,12 @@ const BackgroundEffects: React.FC = () => {
       <div className="hidden md:block absolute top-[40%] left-[20%] w-[300px] h-[300px] bg-brand-gold rounded-full filter blur-[80px] opacity-[0.03] animate-blob animation-delay-4000 will-change-transform"></div>
 
       {/* 
-         Static Gradient Overlay for depth without computational cost 
+         Noise Texture Overlay for "Film Grain" look (Silent Luxury) 
+         HIDDEN ON MOBILE to prevent main thread blocking
       */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-bg/80"></div>
+      <div className="hidden md:block absolute inset-0 opacity-[0.03]" style={{ 
+        backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+      }}></div>
     </div>
   );
 };

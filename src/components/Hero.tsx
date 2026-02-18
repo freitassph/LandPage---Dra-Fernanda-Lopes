@@ -24,7 +24,11 @@ const Hero: React.FC = () => {
               alt="Dra. Fernanda Lopes - Ginecologista e Obstetra" 
               width="600" 
               height="1067"
-              className="w-full h-full object-cover object-[center_30%] md:object-[center_20%] lg:object-[50%_15%] opacity-70 md:opacity-60 lg:opacity-50 transition-opacity duration-1000"
+              /* PERFORMANCE: Removed transition-opacity on mobile for instant LCP paint. 
+                 Opacity is handled via classNames with md: prefixes for effects if needed, 
+                 but here we keep it simple for mobile speed. 
+              */
+              className="w-full h-full object-cover object-[center_30%] md:object-[center_20%] lg:object-[50%_15%] opacity-70 md:opacity-60 lg:opacity-50 md:transition-opacity md:duration-1000"
               fetchPriority="high"
               decoding="sync"
             />

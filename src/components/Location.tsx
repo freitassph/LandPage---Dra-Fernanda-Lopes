@@ -87,12 +87,16 @@ const Location: React.FC = () => {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.376674640866!2d-49.0700!3d-11.7290!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDQzJzQ0LjQiUyA0OcKwMDQnMTIuMCJX!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" 
             width="100%" 
             height="100%" 
-            style={{ border: 0, filter: 'grayscale(100%) invert(92%) contrast(83%)' }} 
+            /* PERFORMANCE: Filter removed on mobile. Only active on md+ screens via Tailwind classes if applied, but inline style here is unconditional.
+               Changing inline style to conditionally apply filter using Tailwind's 'md:' prefix isn't possible directly in style attribute.
+               We will use className for the filter.
+            */
+            className="w-full h-full opacity-60 group-hover:opacity-100 transition-opacity duration-700 md:grayscale md:invert-[.92] md:contrast-[.83]"
+            style={{ border: 0 }} 
             allowFullScreen={true} 
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             title="Mapa da Clínica"
-            className="w-full h-full opacity-60 group-hover:opacity-100 transition-opacity duration-700"
           ></iframe>
         </div>
       </div>
