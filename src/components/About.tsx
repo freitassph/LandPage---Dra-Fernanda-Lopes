@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const About: React.FC = () => {
@@ -7,14 +6,18 @@ const About: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center gap-16">
           <div className="w-full md:w-1/2 relative group">
-            {/* Glow effect */}
-            <div className="absolute -inset-4 bg-brand-rose/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            {/* Glow effect (Desktop only for performance) */}
+            <div className="hidden md:block absolute -inset-4 bg-brand-rose/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             
             <div className="relative overflow-hidden rounded-sm">
                {/* Vertical portrait */}
                <img 
                  src="https://i.ibb.co/HLN98G0z/wmremove-transformed.avif" 
                  alt="Dra. Fernanda Lopes" 
+                 width="600"
+                 height="800"
+                 loading="lazy"
+                 decoding="async"
                  className="relative z-10 w-full h-auto object-cover transition-all duration-700 transform group-hover:scale-[1.02]"
                />
                <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent opacity-50 z-20"></div>

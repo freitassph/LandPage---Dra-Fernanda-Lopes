@@ -5,6 +5,7 @@
 @layer base {
   body {
     @apply bg-brand-bg text-brand-text font-sans antialiased selection:bg-brand-rose selection:text-white;
+    text-rendering: optimizeLegibility;
   }
 
   /* Custom Scrollbar Integration (Noir Aesthetic) */
@@ -38,8 +39,8 @@
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  /* PERFORMANCE: Only animate specific properties, never 'all' */
-  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  /* Use explicit properties instead of 'all' for performance */
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
@@ -70,6 +71,8 @@
   @apply glass rounded-sm transition-all duration-700 ease-out;
   position: relative;
   overflow: hidden;
+  /* Hardware acceleration hint */
+  transform: translateZ(0);
 }
 
 .glass-card::before {
